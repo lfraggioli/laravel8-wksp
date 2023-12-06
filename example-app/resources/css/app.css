@@ -9,16 +9,14 @@ body {
 }
 
 article {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  
     margin: 0 auto;
     max-width: 600px;
     padding: 20px;
 }
 
 h1 {
-    color: #636b6f;
+    color: #222;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     text-align: center;
