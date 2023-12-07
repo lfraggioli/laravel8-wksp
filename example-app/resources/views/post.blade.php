@@ -1,6 +1,12 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <title>My Blog</title>
+        <link rel="stylesheet" href="/app.css">
 
-@section('content')
+</head>
+<body>
     <article>
         <h1>{{ $post->title }}</h1>
     <div>
@@ -8,6 +14,6 @@
     </div>
     </article>
 
-    <a href="/">Go back</a>
-
-@endsection
+    <a href="../">Go back</a>
+</body>
+</html>

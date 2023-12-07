@@ -17,17 +17,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     // return view('welcome');
 
-
-    return view('posts', [
-        'posts' =>  Post::all()
-    ]);
+    $posts = Post::all();
+    // dd($posts);
+    return view('posts', ['posts' => $posts]);
 });
 
 
 
-Route::get('posts/{post}', function ($slug) {
+Route::get('posts/{slug}', function ($slug) {
+    $post = Post::find($slug);
+
+    if (!$post) {
+        abort(404, 'Post not found');
+    }
 
     return view('post', [
-        'post' => Post::findOrFail($slug)
+        'post' => $post
     ]);
-});
+})->name('posts.show');
